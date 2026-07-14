@@ -528,6 +528,31 @@
       </ul>
     </div>
 
+    <h3>Chcesz kilka grafik per ASIN dla jednego produktu?</h3>
+    <p>Checkboxy slotów 1–7 działają jak przełącznik radiowy — możesz zaznaczyć tylko jeden na raz, więc jednym uruchomieniem podmienisz tylko jeden slot. Jeśli dla tego samego ASINu potrzebujesz np. dedykowanej grafiki w PT01 <em>i</em> innej w PT03, zrób to w dwóch osobnych przebiegach:</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <strong>Pierwszy przebieg</strong>
+          <p>Wpisz w kolumnie E nazwę pierwszej grafiki dedykowanej, zaznacz slot (np. 1), uruchom "Podmiana grafiki per ASIN".</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <strong>Drugi przebieg</strong>
+          <p>Nadpisz kolumnę E nazwą drugiej grafiki, zaznacz kolejny slot (np. 3), uruchom ponownie.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="warn">
+      <strong>⚠ Kolumna E jest nadpisywana między przebiegami</strong>
+      Wyniki poprzedniego przebiegu (np. PT01) zostają nietknięte — narzędzie podmienia tylko wybrany slot. Ale sam arkusz nie zachowa informacji "co było w E przy pierwszym uruchomieniu". Jeśli zależy Ci na udokumentowaniu mapowania plik→slot, zapisz je sobie osobno (np. w dodatkowej kolumnie lub komentarzu) przed nadpisaniem.
+    </div>
+
     <h3>Przykład</h3>
     <p>Masz swatch który chcesz pokazać jako pierwsze zdjęcie (PT01). W folderach krajowych nie ma DE_1 (bo chcesz żeby PT01 był swatchem). Wpisujesz nazwę swatcha w kolumnie E, wybierasz slot 1 — narzędzie wygeneruje:</p>
 
