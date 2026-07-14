@@ -262,6 +262,19 @@
   }
   .output-example .highlight { color: var(--accent); font-weight: 600; }
 
+  /* SCREENSHOT PLACEHOLDER */
+  .screenshot-placeholder {
+    border: 1px dashed var(--border);
+    border-radius: 8px;
+    padding: 32px 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    background: var(--surface);
+    margin: 16px 0;
+  }
+  .screenshot-placeholder .ph-icon { font-size: 22px; margin-bottom: 8px; }
+
   /* DIVIDER */
   hr {
     border: none;
@@ -499,6 +512,20 @@
           <p>Zaznacz checkbox <strong>"Tylko IMAGE_PER_ASIN"</strong> jeśli chcesz wygenerować sam output w folderze IMAGE_PER_ASIN. Zostaw odznaczony jeśli chcesz podmienić grafikę we wszystkich krajach — wtedy zostaniesz zapytany o kraje.</p>
         </div>
       </div>
+    </div>
+
+    <div class="screenshot-placeholder">
+      <div class="ph-icon">🖼️</div>
+      <div><strong>Miejsce na screenshot</strong> — okienko z checkboxami slotów 1–7 i opcją "Tylko IMAGE_PER_ASIN" (krok 3–4 powyżej)</div>
+    </div>
+
+    <div class="warn">
+      <strong>⚠ Zasady, o których warto pamiętać</strong>
+      <ul style="margin:0 0 0 18px; padding:0;">
+        <li><strong>Grafika per ASIN ma priorytet.</strong> Jeśli w wybranym slocie (np. PT02) istnieje jednocześnie plik krajowy (np. <code>DE_2.jpg</code>) i grafika wskazana w kolumnie E, wygrywa grafika z kolumny E — zastępuje plik krajowy w tym slocie.</li>
+        <li><strong>Rozszerzenie idzie za plikiem źródłowym.</strong> Grafika per ASIN zachowuje swoje własne rozszerzenie (np. <code>.png</code>), nawet jeśli reszta slotów w danym kraju to <code>.jpg</code>.</li>
+        <li><strong>Brak pliku = cicha pomijka.</strong> Tak jak w innych folderach — jeśli w kolumnie E jest wpisana nazwa, a plik nie istnieje w <code>IMAGE_PER_ASIN</code>, narzędzie po prostu go pominie bez błędu. Warto zerknąć na wynikowy folder po uruchomieniu, żeby złapać literówki w nazwach plików.</li>
+      </ul>
     </div>
 
     <h3>Przykład</h3>
